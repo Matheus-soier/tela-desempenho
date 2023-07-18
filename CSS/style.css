@@ -1,0 +1,266 @@
+@import 'normalize.css';
+
+@font-face {
+  font-family: 'Result';
+  src: url(../fonts/HankenGrotesk-VariableFont_wght.ttf) format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Result-extra-bold';
+  src: url(../fonts/static/HankenGrotesk-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: 'Result-bold';
+  src: url(../fonts/static/HankenGrotesk-Bold.ttf);
+}
+
+:root {
+  --font-extra-bold: 'Result-extra-bold';
+  --font-bold: 'Result-bold';
+  --font-site: 'Result';
+  --bgcolor: #fff;
+  --color-left: #c6baf3;
+  --color-bold: #fff;
+}
+
+body {
+  font-family: var(--font-site);
+  background-color: var(--bgcolor);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 500px;
+  background-color: var(--bgcolor);
+  border-radius: 30px;
+  box-shadow: 0px 0px 80px #6643ff13;
+}
+
+.bloco {
+  flex: 1;
+  border-radius: 30px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  background-image: linear-gradient(to bottom, #6743ff, #322bea);
+}
+
+.right {
+  background-color: var(--bgcolor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultado {
+  display: flex;
+  justify-content: center;
+  height: 60%;
+  width: 250px;
+  position: relative;
+}
+
+.titulo {
+  color: var(--color-left);
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  transform: translate(0, -100%);
+  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.301);
+  width: 200px;
+  height: 200px;
+  background-color: var();
+  border-radius: 50%;
+}
+
+.maior {
+  color: var(--color-bold);
+  width: 100px;
+  font-size: 80px;
+  text-align: center;
+  height: auto;
+  font-family: var(--font-bold);
+}
+
+.cinza {
+  text-align: center;
+  color: var(--color-left);
+  font-size: 23px;
+}
+
+.qualidade-title {
+  margin-top: 40px;
+  color: var(--color-bold);
+  font-family: var(--font-extra-bold);
+  font-size: 30px;
+}
+
+.qualidade-text {
+  text-align: center;
+  width: 250px;
+  margin-top: 20px;
+  color: var(--color-left);
+  font-size: 18px;
+}
+
+.summary {
+  color: black;
+  font-size: 23px;
+  font-family: var(--font-bold);
+  margin-top: 40px;
+  text-align: left;
+}
+
+.pontos {
+  border-radius: 10px;
+  width: 250px;
+  height: 30px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0px 10px 10px;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.tudo {
+  display: flex;
+}
+
+.pontos h3 {
+  font-size: 18px;
+  margin-left: 6px;
+}
+
+.notas {
+  margin-right: 10px;
+  color: #292A45;
+}
+
+.notas h3 span {
+  color: var(--color-left);
+}
+
+.vermelho {
+  color: #DA6763;
+  background-color: #FFF6F5;
+}
+
+.amarelo {
+  color: #FBBB3A;
+  background-color: #FFFBF2;
+}
+
+.verde {
+  color: #26AE8C;
+  background-color: #F2FBFA;
+}
+
+.roxo {
+  color: #403EAD;
+  background-color: #F3F3FD;
+}
+
+.btn {
+  margin-top: 40px;
+  background-color: #292A45;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-bold);
+}
+
+@media (max-width: 750px) {
+  .container {
+    width: 500px;
+  }
+
+  .qualidade-text {
+    width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100vw;
+    height: 800px;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+
+  .left {
+    border-radius: 0 0 40px 40px;
+    width: 100vw;
+    margin-right: 0;
+  }
+
+  .summary {
+    margin-top: 20px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .total {
+    width: 150px;
+    height: 150px;
+  }
+
+  .titulo {
+    margin-top: 20px;
+  }
+
+  .qualidade-title {
+    margin-top: 15px;
+  }
+
+  .qualidade-text {
+    margin-top: 15px;
+  }
+
+  .right {
+    width: 100vw;
+    margin: 0;
+  }
+  .maior {
+    font-size: 50px;
+  }
+}
